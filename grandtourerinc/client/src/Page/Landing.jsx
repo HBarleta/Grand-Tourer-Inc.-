@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 const Landing = () => {
   return (
     <CssBaseline>
-      <Box sx={{ bgcolor: "black" }}>
+      <Box sx={{ bgcolor: "#090909" }}>
         <Box
           sx={{
             maxWidth: "false",
@@ -29,10 +29,10 @@ const Landing = () => {
             bgColor="inherit"
           ></Image>
         </Box>
-        <Box sx={{ width: "auto", px: { xs: 2, md: 12 } }}>
+        <Box sx={{ width: "auto", px: { xs: 2, md: 12 } }} mt={5}>
           <Grid
             container
-            spacing="6"
+            spacing={12}
             justify="space-between"
             alignItems="center"
           >
@@ -65,8 +65,6 @@ const Landing = () => {
               sx={{
                 border: "solid",
                 borderColor: "white",
-                width: "100%",
-                height: "100%",
               }}
             >
               <Typography variant="h1" color="white" align="center">
@@ -74,11 +72,11 @@ const Landing = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Typography variant="h2" color="#94B0DA">
+          <Typography variant="h2" color="#94B0DA" mt={5}>
             Grand Tourer Inc Vs Corporate Rental Agencies
           </Typography>
-          <Grid container alignItems="baseline">
-            <Grid item xs={12} md={6}>
+          <Grid container alignItems="baseline" spacing={12}>
+            <Grid item xs={12} md={6} sx={{ my: 5 }}>
               <Typography
                 color="white"
                 variant="body"
@@ -127,7 +125,7 @@ const Landing = () => {
         <Typography variant="h2" color="#94B0DA">
           Vehicles
         </Typography>
-        <Container>
+        <Container sx={{ mt: 5 }}>
           <Image src={process.env.PUBLIC_URL + "corolla.jpg"}></Image>
           <Grid container direction="column">
             <Grid item>
@@ -146,18 +144,28 @@ const Landing = () => {
               </Typography>
             </Grid>
             <Grid item>
-              <Button variant="contained" size="large">
-                View More Details
-              </Button>
+              <Box display="flex">
+                <Button variant="contained" size="large">
+                  View More Details
+                </Button>
+              </Box>
             </Grid>
           </Grid>
         </Container>
-        <Container>
-          <Typography variant="h2" color="#94B0DA">
+        <Container sx={{ pb: 5 }}>
+          <Typography variant="h2" color="#94B0DA" my={5}>
             Guidelines
           </Typography>
-          <Grid container direction="row">
-            <Grid item xs={12} md={6}>
+          <Grid container direction="row" alignItems="center" spacing={12}>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              sx={{
+                border: "solid",
+                borderColor: "white",
+              }}
+            >
               <Typography variant="h2" color="white">
                 GOOGLE MAPS!
               </Typography>
@@ -179,6 +187,11 @@ const Landing = () => {
                   </li>
                 </ul>
               </Typography>
+              <Box display="flex">
+                <Button variant="contained" size="large">
+                  View More Details
+                </Button>
+              </Box>
             </Grid>
           </Grid>
         </Container>
