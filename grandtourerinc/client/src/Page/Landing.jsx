@@ -8,7 +8,9 @@ import { Link } from "react-router-dom";
 const Landing = () => {
   return (
     <CssBaseline>
+      {/* parent container */}
       <Box sx={{ bgcolor: "#090909" }}>
+        {/* Banner image */}
         <Box
           sx={{
             maxWidth: "false",
@@ -30,6 +32,7 @@ const Landing = () => {
             bgColor="inherit"
           ></Image>
         </Box>
+        {/* Banner image */}
         {/* spacer component */}
         <Box sx={{ height: "10vh" }}></Box>
         {/* spacer component */}

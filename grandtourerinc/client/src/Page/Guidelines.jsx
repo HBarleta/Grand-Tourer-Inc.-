@@ -10,6 +10,7 @@ const Guidelines = () => {
     <CssBaseline>
       {/* parent container */}
       <Box sx={{ bgcolor: "#090909" }}>
+        {/* Banner image */}
         <Box
           sx={{
             maxWidth: "false",
@@ -31,6 +32,7 @@ const Guidelines = () => {
             bgColor="inherit"
           ></Image>
         </Box>
+        {/* Banner image */}
         {/* spacer component */}
         <Box sx={{ height: "5vh" }}></Box>
         {/* spacer component */}

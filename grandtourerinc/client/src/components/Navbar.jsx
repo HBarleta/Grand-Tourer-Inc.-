@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/IconButton";
 import Image from "mui-image";
 import { Link } from "react-router-dom";
 
-const pages = ["Rent Now", "Vehicles", "Guidelines"];
+const pages = ["Vehicles", "Guidelines"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -76,6 +76,13 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
+              {/* Mobile / tablet view navbar menu items */}
+              {/* Remove Rent Now button and replace with Custom button linking to turo listing */}
+              <MenuItem>
+                <Button variant="contained" size="medium">
+                  Rent Now!
+                </Button>
+              </MenuItem>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Link to={page}>
@@ -116,13 +123,20 @@ function ResponsiveAppBar() {
               justifyContent: "space-evenly",
             }}
           >
+            {/* Full size navbar menu items */}
+            {/* Remove Rent Now button and replace with Custom button linking to turo listing */}
+            <MenuItem>
+              <Button variant="contained" size="medium">
+                Rent Now!
+              </Button>
+            </MenuItem>
             {pages.map((page) => (
               <Link to={page}>
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
                   sx={{
-                    my: 0,
+                    mt: 1,
                     mx: 0,
                     color: "#d8dbe2",
                     display: "block",
