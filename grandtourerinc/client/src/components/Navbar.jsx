@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/IconButton";
 import Image from "mui-image";
 import { Link } from "react-router-dom";
 
-const pages = ["Rent Now", "Vehicles", "Guidlines"];
+const pages = ["Rent Now", "Vehicles", "Guidelines"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
