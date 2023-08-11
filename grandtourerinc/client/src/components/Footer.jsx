@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/IconButton";
 import Image from "mui-image";
 import { Link } from "react-router-dom";
 
-const pages = ["Rent Now", "Vehicles", "Guidlines"];
+const pages = ["Rent Now", "Vehicles", "Guidelines"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -76,13 +76,17 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
+              {/* mobile / tablet navbar menu items */}
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                <Link to={page}>
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
+          {/* mobile / tablet navbar menu items */}
           {/* Navbarlogo */}
           <Box
             sx={{
@@ -105,6 +109,7 @@ function ResponsiveAppBar() {
             </Link>
           </Box>
           {/* Navbarlogo */}
+          {/* fullsize navbar menu items */}
           <Box
             sx={{
               flexGrow: 0.5,
@@ -113,20 +118,23 @@ function ResponsiveAppBar() {
             }}
           >
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 0,
-                  mx: 0,
-                  color: "#d8dbe2",
-                  display: "block",
-                }}
-              >
-                {page}
-              </Button>
+              <Link to={page}>
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 0,
+                    mx: 0,
+                    color: "#d8dbe2",
+                    display: "block",
+                  }}
+                >
+                  {page}
+                </Button>
+              </Link>
             ))}
           </Box>
+          {/* fullsize navbar menu items */}
         </Toolbar>
       </Container>
     </AppBar>

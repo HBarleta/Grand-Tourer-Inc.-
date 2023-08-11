@@ -33,7 +33,7 @@ const Landing = () => {
         {/* spacer component */}
         <Box sx={{ height: "10vh" }}></Box>
         {/* spacer component */}
-        <Box sx={{ width: "auto", px: { xs: 2, md: 12 }, textAlign: "left" }}>
+        <Box sx={{ px: { xs: 2, md: 12 }, textAlign: "left" }}>
           <Grid container justify="space-around" alignItems="top">
             <Grid item xs="12" md="5">
               <Typography
