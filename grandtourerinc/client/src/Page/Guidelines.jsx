@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Image from "mui-image";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 const Guidelines = () => {
   return (
     <CssBaseline>
@@ -159,9 +160,22 @@ const Guidelines = () => {
             </Grid>
           </Grid>
           {/* spacer component */}
-          <Box sx={{ height: "15vh" }}></Box>
+          <Box sx={{ height: "10vh" }}></Box>
           {/* spacer component */}
         </Box>
+        <Box>
+          <Typography variant="h2" color="#E2C044">
+            Ready to Rent? Check out my vehicles!
+            <Link to="/vehicles">
+              <Button variant="contained" size="large" sx={{ mx: 5 }}>
+                Vehicles!
+              </Button>
+            </Link>
+          </Typography>
+        </Box>
+        {/* spacer component */}
+        <Box sx={{ height: "10vh" }}></Box>
+        {/* spacer component */}
       </Box>
       {/* end of parent container */}
     </CssBaseline>

@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Image from "mui-image";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 const Vehicles = () => {
   return (
     <CssBaseline>
@@ -113,9 +114,11 @@ const Vehicles = () => {
               {/* spacer component */}
               <Box sx={{ height: "5vh" }}></Box>
               {/* spacer component */}
-              <Button variant="contained" size="large">
-                View More Guidelines
-              </Button>
+              <Link to="/guidelines">
+                <Button variant="contained" size="large">
+                  View More Guidelines
+                </Button>
+              </Link>
             </Grid>
             <Grid item xs={12} md={6} textAlign="left">
               <Typography variant="h2" color="#94B0DA" align="left">
@@ -148,9 +151,12 @@ const Vehicles = () => {
               {/* spacer component */}
               <Box sx={{ height: "5vh" }}></Box>
               {/* spacer component */}
+
+              {/* Add turo link here!! */}
               <Button variant="contained" size="large">
                 Rent Me On Turo!
               </Button>
+              {/* Add turo link here!! */}
             </Grid>
           </Grid>
         </Container>
