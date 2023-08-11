@@ -4,6 +4,7 @@ import Image from "mui-image";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 const Landing = () => {
   return (
     <CssBaseline>
@@ -29,18 +30,16 @@ const Landing = () => {
             bgColor="inherit"
           ></Image>
         </Box>
-        <Box sx={{ width: "auto", px: { xs: 2, md: 12 } }} mt={5}>
-          <Grid
-            container
-            spacing={12}
-            justify="space-between"
-            alignItems="center"
-          >
-            <Grid item xs="12" md="4">
+        {/* spacer component */}
+        <Box sx={{ height: "10vh" }}></Box>
+        {/* spacer component */}
+        <Box sx={{ width: "auto", px: { xs: 2, md: 12 }, textAlign: "left" }}>
+          <Grid container justify="space-around" alignItems="top">
+            <Grid item xs="12" md="5">
               <Typography
                 variant="h1"
                 color="#FFD700"
-                sx={{ typography: { xs: "h3", md: "h1" } }}
+                sx={{ typography: { xs: "h3", md: "h1" }, py: 6 }}
               >
                 About Grand Tourer Inc.
               </Typography>
@@ -61,10 +60,11 @@ const Landing = () => {
             <Grid
               item
               xs="12"
-              md="8"
+              md="7"
               sx={{
                 border: "solid",
                 borderColor: "white",
+                height: "50vh",
               }}
             >
               <Typography variant="h1" color="white" align="center">
@@ -72,15 +72,24 @@ const Landing = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Typography variant="h2" color="#94B0DA" mt={5}>
+          <Box sx={{ height: "10vh" }}></Box>
+          <Typography variant="h2" color="#94B0DA" pt={6} align="center">
             Grand Tourer Inc Vs Corporate Rental Agencies
           </Typography>
-          <Grid container alignItems="baseline" spacing={12}>
-            <Grid item xs={12} md={6} sx={{ my: 5 }}>
+          {/* spacer component */}
+          <Box sx={{ height: "5vh" }}></Box>
+          {/* spacer component */}
+          <Grid
+            container
+            margin="auto"
+            sx={{
+              justifyContent: "space-between",
+            }}
+          >
+            <Grid item xs={12} md={4}>
               <Typography
                 color="white"
                 variant="body"
-                align="left"
                 sx={{ fontSize: { xs: "1.3rem", md: "1.5rem" } }}
               >
                 Peer to Peer car rental services such as Turo has become more
@@ -96,16 +105,11 @@ const Landing = () => {
                 rental.
               </Typography>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Typography variant="h3" color="white" align="left">
+            <Grid item xs={12} md={4}>
+              <Typography variant="h3" color="white">
                 Benefits of Booking with Grand Tourer Inc.
               </Typography>
-              <Typography
-                variant="body"
-                fontSize="1.5rem"
-                color="white"
-                align="left"
-              >
+              <Typography variant="body" fontSize="1.5rem" color="white">
                 <ul>
                   <li>
                     Easy communication (Just send a message or call your host!)
@@ -122,10 +126,16 @@ const Landing = () => {
             </Grid>
           </Grid>
         </Box>
+        {/* spacer component */}
+        <Box sx={{ height: "10vh" }}></Box>
+        {/* spacer component */}
         <Typography variant="h2" color="#94B0DA">
           Vehicles
         </Typography>
-        <Container sx={{ mt: 5 }}>
+        {/* spacer component */}
+        <Box sx={{ height: "5vh" }}></Box>
+        {/* spacer component */}
+        <Container>
           <Image src={process.env.PUBLIC_URL + "corolla.jpg"}></Image>
           <Grid container direction="column">
             <Grid item>
@@ -145,17 +155,25 @@ const Landing = () => {
             </Grid>
             <Grid item>
               <Box display="flex">
-                <Button variant="contained" size="large">
-                  View More Details
-                </Button>
+                <Link to="/vehicles">
+                  <Button variant="contained" size="large">
+                    View More Details
+                  </Button>
+                </Link>
               </Box>
             </Grid>
           </Grid>
         </Container>
-        <Container sx={{ pb: 5 }}>
-          <Typography variant="h2" color="#94B0DA" my={5}>
+        {/* spacer component */}
+        <Box sx={{ height: "5vh" }}></Box>
+        {/* spacer component */}
+        <Container>
+          <Typography variant="h2" color="#94B0DA">
             Guidelines
           </Typography>
+          {/* spacer component */}
+          <Box sx={{ height: "5vh" }}></Box>
+          {/* spacer component */}
           <Grid container direction="row" alignItems="center" spacing={12}>
             <Grid
               item
@@ -188,12 +206,17 @@ const Landing = () => {
                 </ul>
               </Typography>
               <Box display="flex">
-                <Button variant="contained" size="large">
-                  View More Details
-                </Button>
+                <Link to="/guidelines">
+                  <Button variant="contained" size="large">
+                    View More Details
+                  </Button>
+                </Link>
               </Box>
             </Grid>
           </Grid>
+          {/* spacer component */}
+          <Box sx={{ height: "5vh" }}></Box>
+          {/* spacer component */}
         </Container>
       </Box>
     </CssBaseline>
