@@ -3,6 +3,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Image from "mui-image";
 import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
 const Vehicles = () => {
   return (
     <CssBaseline>
@@ -29,12 +30,18 @@ const Vehicles = () => {
             bgColor="inherit"
           ></Image>
         </Box>
-        <Container sx={{ py: 10 }}>
+        {/* spacer component */}
+        <Box sx={{ height: "5vh" }}></Box>
+        {/* spacer component */}
+        <Container>
           <Typography variant="h1" color="#E2C044">
             Vehicles
           </Typography>
         </Container>
-        <Container sx={{ border: "solid", borderColor: "white" }}>
+        {/* spacer component */}
+        <Box sx={{ height: "5vh" }}></Box>
+        {/* spacer component */}
+        <Container>
           <Image
             src={process.env.PUBLIC_URL + "corolla.jpg"}
             fit="cover"
@@ -48,21 +55,16 @@ const Vehicles = () => {
             shiftDuration={900}
             bgColor="inherit"
           ></Image>
+          {/* spacer component */}
+          <Box sx={{ height: "5vh" }}></Box>
+          {/* spacer component */}
           <Grid
             container
             sx={{
-              py: 10,
               justifyContent: "space-between",
-              border: "solid",
-              borderColor: "yellow",
             }}
           >
-            <Grid
-              item
-              xs={12}
-              md={6}
-              sx={{ border: "solid", borderColor: "orange", textAlign: "left" }}
-            >
+            <Grid item xs={12} md={6} sx={{ textAlign: "left" }}>
               <Typography variant="h2" color="#94B0DA">
                 Description
               </Typography>
@@ -106,17 +108,57 @@ const Vehicles = () => {
                 <br />
                 REMINDER!!!!!!!!!NO Pets 🐶 🐱 🦔 NO Smoking 🚭Any violation
                 while driving my car is the renter’s responsibility✌🏻
+                <br />
               </Typography>
+              {/* spacer component */}
+              <Box sx={{ height: "5vh" }}></Box>
+              {/* spacer component */}
+              <Button variant="contained" size="large">
+                View More Guidelines
+              </Button>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Typography variant="h2" color="#94B0DA">
+            <Grid item xs={12} md={6} textAlign="left">
+              <Typography variant="h2" color="#94B0DA" align="left">
                 Features
               </Typography>
+              <Typography
+                variant="body"
+                fontSize="1.5rem"
+                color="#D8DBE2"
+                align="left"
+              >
+                <ul>
+                  <li>Must be 21+ to book</li>
+                  <li>Automatic transmission</li>
+                  <li>Android Auto</li>
+                  <li>Apple CarPlay</li>
+                  <li>Backup camera</li>
+                  <li>Bluetooth</li>
+                  <li>GPS</li>
+                  <li>Keyless entry</li>
+                  <li>Long-term car</li>
+                  <li>USB charger</li>
+                  <li>USB input</li>
+                  <li>Tinted</li>
+                  <li>Navigation</li>
+                  <li>Hybrid</li>
+                  <li>5 Seater</li>
+                </ul>
+              </Typography>
+              {/* spacer component */}
+              <Box sx={{ height: "5vh" }}></Box>
+              {/* spacer component */}
+              <Button variant="contained" size="large">
+                Rent Me On Turo!
+              </Button>
             </Grid>
           </Grid>
         </Container>
-        {/* end of parent container */}
+        {/* spacer component */}
+        <Box sx={{ height: "5vh" }}></Box>
+        {/* spacer component */}
       </Box>
+      {/* end of parent container */}
     </CssBaseline>
   );
 };
